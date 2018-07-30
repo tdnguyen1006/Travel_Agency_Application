@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg2130f16asn2_nguyen_nguyen_miguel.Toan_Albert_Albryan_FXMLDocumentController">
+  <tabs>
+    <Tab fx:id="tabHome" closable="false" text="Home">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imgLogo_1" fitHeight="320.0" fitWidth="320.0" layoutX="40.0" layoutY="40.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@logo.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Button fx:id="btnStart" layoutX="560.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnStart_Click" prefHeight="40.0" prefWidth="200.0" text="Book Flight">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="400.0" layoutY="40.0" text="Welcome to Travel Agency" textFill="#0d25ff">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <TextArea editable="false" layoutX="400.0" layoutY="120.0" prefHeight="280.0" prefWidth="360.0" wrapText="true" />
+                  <Button fx:id="btnViewReservation" layoutX="350.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnViewReservation_Click" prefHeight="40.0" prefWidth="200.0" text="View Reservation">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab fx:id="tabSearch" text="Search">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="40.0" layoutY="160.0" prefHeight="120.0" prefWidth="720.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="520.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Passport/ID Number" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Reservation ID">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Last Name" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtID" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtLName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtPID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btnView" layoutX="560.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnView_Click" prefHeight="40.0" prefWidth="200.0" text="View Reservation">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblerr_tabSeach" layoutX="40.0" layoutY="400.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="40.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnHome_Click" prefHeight="40.0" prefWidth="100.0" text="Home">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnGotoUpdate" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" onAction="#btnGotoUpdate_Click" prefHeight="40.0" prefWidth="250.0" text="Update Information">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab fx:id="tabFlight" closable="false" text="Book A Flight">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <DatePicker fx:id="dpLeavingDate" layoutX="40.0" layoutY="320.0" prefHeight="40.0" prefWidth="270.0" promptText="dd/mm/yyyy" />
+                  <ComboBox fx:id="cbsource" layoutX="40.0" layoutY="80.0" prefHeight="40.0" prefWidth="270.0" />
+                  <Label layoutX="40.0" layoutY="40.0" prefHeight="40.0" prefWidth="140.0" text="Leaving From">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="160.0" prefHeight="40.0" prefWidth="140.0" text="Going To">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbDestination" layoutX="40.0" layoutY="200.0" prefHeight="40.0" prefWidth="270.0" />
+                  <Label layoutX="40.0" layoutY="280.0" prefHeight="40.0" prefWidth="140.0" text="Leaving On">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnNext_tabFlight" layoutX="660.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnNext_tabFlight_Click" prefHeight="40.0" prefWidth="100.0" text="Next">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnClear_tabFlight" layoutX="550.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnClear_tabFlight_Click" prefHeight="40.0" prefWidth="100.0" text="Clear">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnHome_tabFlight" layoutX="40.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnHome_Click" prefHeight="40.0" prefWidth="200.0" text="Start Over">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="imgLogo_2" fitHeight="320.0" fitWidth="320.0" layoutX="440.0" layoutY="40.0" pickOnBounds="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblerr_tabFlight" layoutX="40.0" layoutY="520.0" prefWidth="720.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab fx:id="tabTravellerInfo" closable="false" text="Traveller Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnClear_tabTI" layoutX="340.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnClear_tabTI_Click" prefHeight="40.0" prefWidth="100.0" text="Clear">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBack_tabTI" layoutX="450.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnBack_tabTI_Click" prefHeight="40.0" prefWidth="100.0" text="Back">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNext_tabTI" layoutX="560.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnNext_tabTI_Click" prefHeight="40.0" prefWidth="200.0" text="Book a flight">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnHome_tabTI" layoutX="40.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnHome_Click" prefHeight="40.0" prefWidth="200.0" text="Start Over">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <GridPane layoutX="40.0" layoutY="40.0" prefHeight="360.0" prefWidth="720.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="470.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Title">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Last Name" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Passport/ID Number" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date of Birth" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFirst" promptText="John" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtLast" promptText="Doe" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtPassport" promptText="B123456" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dpDoB" promptText="dd/mm/yyyy" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="cbtitle" prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Email Address" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmail" promptText="info@email.com" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Phone Number" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPhone" promptText="1234567890" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="lblerr_tabTI" layoutX="40.0" layoutY="520.0" prefWidth="720.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabUpdateInfo" text="Update Info">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="40.0" layoutY="40.0" prefHeight="360.0" prefWidth="720.0">
+                     <children>
+                        <Label text="Title" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="First Name" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Last Name" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Passport/ID Number" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date of Birth" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFirst_update" promptText="John" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtLast_update" promptText="Doe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtPassport_update" promptText="B123456" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="dpDoB_update" promptText="dd/mm/yyyy" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="cbtitle_update" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Email Address" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtEmail_update" promptText="info@email.com" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Phone Number" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPhone_update" promptText="1234567890" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtRID" disable="true" editable="false" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="470.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Button fx:id="btnUpdate" layoutX="660.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnUpdate_Click" prefHeight="40.0" prefWidth="100.0" text="Update">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewReservation1" layoutX="450.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnViewReservation_Click" prefHeight="40.0" prefWidth="200.0" text="View Reservation">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="40.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnHome_Click" prefHeight="40.0" prefWidth="100.0" text="Home">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblerr_tabUpdate" layoutX="40.0" layoutY="520.0" textFill="RED">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabSummary" text="Summary">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnHome_tabSummary" layoutX="660.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnHome_Click" prefHeight="40.0" prefWidth="100.0" text="Finish">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Button>
+                  <GridPane layoutX="40.0" layoutY="33.0" prefHeight="360.0" prefWidth="720.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="470.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="743.0" text="Thanks for flying with Travel Agency." GridPane.columnSpan="2">
+                           <font>
+                              <Font name="Arial Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="20.0" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="20.0" prefHeight="25.0" prefWidth="292.0" text="Full Name: " GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblName" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="274.0" text="Passport/ID No.: " textAlignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPassport" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="268.0" text="Date of Birth: " textAlignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="270.0" text="Email Address: " textAlignment="RIGHT" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="273.0" text="Tel: " GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="331.0" text="Reservation ID:" textAlignment="RIGHT" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="308.0" text="Leaving From: " textAlignment="RIGHT" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="275.0" text="Going To: " textAlignment="RIGHT" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="267.0" text="Leaving On: " textAlignment="RIGHT" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="274.0" text="Flight No.: " textAlignment="RIGHT" GridPane.rowIndex="12">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDoB" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblEmail" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTel" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblReservationID" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblsrc" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbldestination" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbldepartdate" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblflightno" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="283.0" text="Total Fare: " textAlignment="RIGHT" GridPane.rowIndex="13">
+                           <font>
+                              <Font name="Arial" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblfare" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

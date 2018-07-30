@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="2130F16Asn2_Nguyen_Nguyen_Miguel.jnlp">
+  <information>
+    <title>2130F16Asn2_Nguyen_Nguyen_Miguel</title>
+    <vendor>mutan</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="2130F16Asn2_Nguyen_Nguyen_Miguel.jar" size="3448631" download="eager" />
+    <jar href="lib\derby.jar" size="3104883" download="eager" />
+    <jar href="lib\derbyclient.jar" size="585704" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="2130F16Asn2_Nguyen_Nguyen_Miguel" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pkg2130f16asn2_nguyen_nguyen_miguel.Toan_Albert_Albryan_Main"  name="2130F16Asn2_Nguyen_Nguyen_Miguel" />
+  <update check="always"/>
+</jnlp>
